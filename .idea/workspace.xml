@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbcd6a69-7589-4839-9118-ad4d12749ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LocadoraDeVeiculos.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeClientes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeVeiculos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/gerenciadores/exception/RegistroJaExistenteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/gerenciadores/exception/RegistroNaoEncontradoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/repository/ClientesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/repository/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/repository/VeiculosRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entidades/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entidades/ContratoDeAluguel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entidades/Entidade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entidades/Veiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/enums/StatusDeVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/enums/TipoDeVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/tipos/Agendamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/tipos/Contato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/CapturadorDeEntrada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Clientes/MenuAlterarCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Clientes/MenuCadastrarCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Clientes/MenuClienteAlugarVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Clientes/MenuClienteDevolverVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Clientes/MenuClientesFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Clientes/MenuListarClientes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MenuComSubmenus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MenuEncerrar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MenuFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MenuGeral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MenuGeralFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Submenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuAlterarVeiculoCadastrado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuBuscarVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuCadastrarVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuDeVeiculosFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="cbcd6a69-7589-4839-9118-ad4d12749ea4" name="Changes" comment="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,13 +30,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
@@ -102,6 +60,14 @@
       <option name="presentableId" value="Default" />
       <updated>1676145261889</updated>
     </task>
+    <task id="LOCAL-00001" summary="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc">
+      <created>1676264738660</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676264738660</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,5 +80,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc" />
   </component>
 </project>
