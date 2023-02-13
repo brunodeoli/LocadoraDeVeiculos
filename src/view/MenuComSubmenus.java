@@ -34,7 +34,7 @@ public class MenuComSubmenus extends Submenu {
     private Menu selecionarMenu() {
         Menu menu = null;
         do {
-            String menuSelecionado = CapturadorDeEntrada.capturarString("o menu");
+            String menuSelecionado = CapturadorDeEntrada.capturarString("o menu: ");
             menu = submenus.get(menuSelecionado);
 
             if (menu == null) {

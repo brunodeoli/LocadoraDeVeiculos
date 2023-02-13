@@ -12,7 +12,7 @@ import model.tipos.Contato;
 import java.util.List;
 
 public class GerenciadorDeVeiculos {
-    public static final String DESCRICAO_CLASSE = "Veiculos";
+    public static final String DESCRICAO_CLASSE = "Veiculo";
     private final VeiculosRepository repository;
 
     public GerenciadorDeVeiculos(VeiculosRepository repository) {

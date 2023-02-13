@@ -1,14 +1,21 @@
 package model.tipos;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Agendamento {
+
+    private static DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
     private LocalDateTime data;
     private String local;
 
     public Agendamento(LocalDateTime data, String local) {
         this.data = data;
         this.local = local;
+    }
+
+    public static DateTimeFormatter getFmt() {
+        return fmt;
     }
 
     public LocalDateTime getData() {

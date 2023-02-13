@@ -24,7 +24,7 @@ public class GerenciadorDeLocacao {
         this.veiculosRepository = veiculosRepository;
     }
 
-    public ContratoDeAluguel cadastrarCliente(Cliente cliente, Veiculo veiculoAlugado, Agendamento dataRetirada, Agendamento dataDevolucao) {
+    public ContratoDeAluguel cadastrarContrato(Cliente cliente, Veiculo veiculoAlugado, Agendamento dataRetirada, Agendamento dataDevolucao) {
         this.ordemDeContrato += 1;
         return locacaoRepository.salvar(new ContratoDeAluguel(String.valueOf(this.ordemDeContrato), cliente, veiculoAlugado, dataRetirada, dataDevolucao));
     }

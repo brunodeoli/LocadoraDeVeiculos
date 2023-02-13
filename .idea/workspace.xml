@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbcd6a69-7589-4839-9118-ad4d12749ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeLocacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/repository/LocacaoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/enums/StatusDeContrato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/enums/TipoDeCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Locacao/MenuBuscarContrato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Locacao/MenuCadastrarLocacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Locacao/MenuEfetuarAluguel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Locacao/MenuEfetuarDevolucao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Locacao/MenuListarContratosEmAberto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Locacao/MenuLocacaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuListarVeiculos.java" afterDir="false" />
+    <list default="true" id="cbcd6a69-7589-4839-9118-ad4d12749ea4" name="Changes" comment="Criando ligação entre cliente e veiculo a partir de contrato de locação">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeClientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/repository/VeiculosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/repository/VeiculosRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entidades/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entidades/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entidades/ContratoDeAluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entidades/ContratoDeAluguel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entidades/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entidades/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeLocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeLocacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/enums/TipoDeCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/enums/TipoDeCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/enums/TipoDeVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/enums/TipoDeVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tipos/Agendamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tipos/Agendamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuAlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Clientes/MenuAlterarCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuCadastrarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Clientes/MenuCadastrarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuClienteAlugarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Clientes/MenuBuscarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuClienteDevolverVeiculo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuClientesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Clientes/MenuClientesFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuAlterarVeiculoCadastrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuAlterarVeiculoCadastrado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuBuscarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuBuscarVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Locacao/MenuCadastrarLocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Locacao/MenuCadastrarLocacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MenuComSubmenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuComSubmenus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuCadastrarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuCadastrarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuDeVeiculosFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuDeVeiculosFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676265395811</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Criando ligação entre cliente e veiculo a partir de contrato de locação">
+      <created>1676311916166</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676311916166</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -172,6 +165,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc" />
+    <MESSAGE value="Criando ligação entre cliente e veiculo a partir de contrato de locação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando ligação entre cliente e veiculo a partir de contrato de locação" />
   </component>
 </project>
