@@ -17,17 +17,17 @@ public class MenuAlterarVeiculoCadastrado extends Submenu {
 
     @Override
     public void acao() {
-        String placa = CapturadorDeEntrada.capturarString("a identificação (placa)");
+        String placa = CapturadorDeEntrada.capturarString("a identificação (placa): ");
 
         if (!gerenciadorDeVeiculos.existeVeiculo(placa)) {
             System.out.println("Não existe um veiculo com essa placa");
             return;
         }
 
-        String marca = CapturadorDeEntrada.capturarString("a marca");
-        String modelo = CapturadorDeEntrada.capturarString("o modelo");
+        String marca = CapturadorDeEntrada.capturarString("a marca: ");
+        String modelo = CapturadorDeEntrada.capturarString("o modelo: ");
         //TODO tratar tipo do veiculo
-        String tipo = CapturadorDeEntrada.capturarString("o tipo do veiculo");
+        String tipo = CapturadorDeEntrada.capturarString("o tipo do veiculo: ");
 
         gerenciadorDeVeiculos.alterarVeiculo(marca, modelo, placa, TipoDeVeiculo.valueOf(tipo));
 

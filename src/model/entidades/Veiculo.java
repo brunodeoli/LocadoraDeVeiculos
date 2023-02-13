@@ -25,6 +25,14 @@ public class Veiculo implements Entidade {
         return tipoDeVeiculo;
     }
 
+    public StatusDeVeiculo getStatusDeVeiculo(){
+        return statusDeVeiculo;
+    }
+
+    public void setStatusDeVeiculo(StatusDeVeiculo statusDeVeiculo) {
+        this.statusDeVeiculo = statusDeVeiculo;
+    }
+
     @Override
     public String getId() {
         return placa;
@@ -35,6 +43,8 @@ public class Veiculo implements Entidade {
         return "Veiculo: " +
                 marca + ", " +
                 modelo + ", " +
-                placa;
+                placa + ", " +
+                tipoDeVeiculo + ", " +
+                statusDeVeiculo;
     }
 }

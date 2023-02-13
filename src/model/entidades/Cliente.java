@@ -1,18 +1,21 @@
 package model.entidades;
 
+import model.enums.TipoDeCliente;
 import model.tipos.Contato;
 
 public class Cliente implements Entidade{
 
     private static final long serialVersionUID = 1L;
 
-    public final String nome;
-    public final String id;
-    public Contato contato;
+    private final String nome;
+    private final String id;
+    private final TipoDeCliente tipoDeCliente;
+    private Contato contato;
 
-    public Cliente(String nome, String id, Contato contato) {
+    public Cliente(String nome, String id, TipoDeCliente tipoDeCliente, Contato contato) {
         this.nome = nome;
         this.id = id;
+        this.tipoDeCliente = tipoDeCliente;
         this.contato = contato;
     }
 
@@ -26,6 +29,10 @@ public class Cliente implements Entidade{
 
     public void setContato(Contato contato) {
         this.contato = contato;
+    }
+
+    public TipoDeCliente getTipoDeCliente() {
+        return tipoDeCliente;
     }
 
     @Override

@@ -6,6 +6,8 @@ import model.tipos.Contato;
 import view.CapturadorDeEntrada;
 import view.Submenu;
 
+import java.util.Locale;
+
 public class MenuCadastrarCliente extends Submenu {
 
     private final GerenciadorDeClientes gerenciadorDeClientes;
@@ -18,18 +20,20 @@ public class MenuCadastrarCliente extends Submenu {
 
     @Override
     public void acao() {
-        String id = CapturadorDeEntrada.capturarString("a identificação (cpf/cnpj)");
+        String id = CapturadorDeEntrada.capturarString("a identificação (cpf/cnpj): ");
 
         if (gerenciadorDeClientes.existeCliente(id)) {
             System.out.println("Já existe um cliente com essa identificação");
             return;
         }
 
-        String nome = CapturadorDeEntrada.capturarString("o nome");
+        String nome = CapturadorDeEntrada.capturarString("o nome: ");
 
-        String email = CapturadorDeEntrada.capturarString("um email para contato");
-        String telefone = CapturadorDeEntrada.capturarString("um telefone para contato");
-        String endereco = CapturadorDeEntrada.capturarString("o endereço");
+        String email = CapturadorDeEntrada.capturarString("um email para contato: ");
+        String telefone = CapturadorDeEntrada.capturarString("um telefone para contato: ");
+        String endereco = CapturadorDeEntrada.capturarString("o endereço: ");
+
+        //TODO tipo de cliente
 
         Cliente clienteCadastrado = gerenciadorDeClientes.cadastrarCliente(nome, id, new Contato(email, telefone, endereco));
 

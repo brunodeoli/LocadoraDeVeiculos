@@ -17,7 +17,7 @@ public class MenuCadastrarVeiculo extends Submenu {
 
     @Override
     public void acao() {
-        String placa = CapturadorDeEntrada.capturarString("a identificação (placa)");
+        String placa = CapturadorDeEntrada.capturarString("a identificação (placa): ");
 
         if (gerenciadorDeVeiculos.existeVeiculo(placa)) {
             System.out.println("Já existe um veiculo com essa placa");
@@ -25,10 +25,10 @@ public class MenuCadastrarVeiculo extends Submenu {
         }
 
 
-        String marca = CapturadorDeEntrada.capturarString("a marca");
+        String marca = CapturadorDeEntrada.capturarString("a marca: : ");
         String modelo = CapturadorDeEntrada.capturarString("o modelo");
         //TODO tratar tipo do veiculo
-        String tipo = CapturadorDeEntrada.capturarString("o tipo do veiculo");
+        String tipo = CapturadorDeEntrada.capturarString("o tipo do veiculo: ");
 
         Veiculo veiculoCadastrado = gerenciadorDeVeiculos.cadastrarVeiculo(marca, modelo, placa, TipoDeVeiculo.valueOf(tipo));
 

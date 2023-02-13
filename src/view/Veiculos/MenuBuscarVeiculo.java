@@ -1,7 +1,7 @@
 package view.Veiculos;
 
 import controller.gerenciadores.GerenciadorDeVeiculos;
-import model.enums.TipoDeVeiculo;
+import model.entidades.Veiculo;
 import view.CapturadorDeEntrada;
 import view.Submenu;
 
@@ -16,13 +16,17 @@ public class MenuBuscarVeiculo extends Submenu {
 
     @Override
     public void acao() {
-        String placa = CapturadorDeEntrada.capturarString("a identificação (placa)");
+        String placa = CapturadorDeEntrada.capturarString("a identificação (placa): ");
 
         if (!gerenciadorDeVeiculos.existeVeiculo(placa)) {
             System.out.println("Não existe um veiculo com essa placa");
             return;
         }
 
+        Veiculo veiculo = gerenciadorDeVeiculos.consultarPorId(placa);
+
         System.out.println(GerenciadorDeVeiculos.DESCRICAO_CLASSE + " encontrado com sucesso");
+
+        System.out.println(veiculo);
     }
 }

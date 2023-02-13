@@ -17,8 +17,8 @@ public class MenuClientesFactory implements MenuFactory {
         MenuComSubmenus menuDeClientes = new MenuComSubmenus("Menu de Clientes");
         menuDeClientes.adicionarSubMenu(new MenuCadastrarCliente(gerenciadorDeClientes));
         menuDeClientes.adicionarSubMenu(new MenuAlterarCliente(gerenciadorDeClientes));
-        menuDeClientes.adicionarSubMenu(new MenuClienteAlugarVeiculo(gerenciadorDeClientes));
-        menuDeClientes.adicionarSubMenu(new MenuClienteDevolverVeiculo(gerenciadorDeClientes));
+        menuDeClientes.adicionarSubMenu(new MenuBuscarCliente(gerenciadorDeClientes));
+        menuDeClientes.adicionarSubMenu(new MenuListarClientes(gerenciadorDeClientes));
         return menuDeClientes;
     }
 }

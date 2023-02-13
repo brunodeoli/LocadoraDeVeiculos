@@ -3,6 +3,7 @@ package controller.repository;
 import model.entidades.Veiculo;
 import controller.gerenciadores.exception.RegistroJaExistenteException;
 import controller.gerenciadores.exception.RegistroNaoEncontradoException;
+import model.enums.StatusDeVeiculo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,5 +65,15 @@ public class VeiculosRepository implements Repository<Veiculo>{
     @Override
     public List<Veiculo> listarTodos() {
         return new ArrayList<>(listaVeiculos);
+    }
+
+    public List<Veiculo> listarDisponiveis() {
+        List<Veiculo> veiculosDisponiveis = new ArrayList<>();
+        for(Veiculo veiculo : listaVeiculos){
+            if(veiculo.getStatusDeVeiculo().equals(StatusDeVeiculo.DISPONIVEL)){
+                veiculosDisponiveis.add(veiculo);
+            }
+        }
+        return veiculosDisponiveis;
     }
 }

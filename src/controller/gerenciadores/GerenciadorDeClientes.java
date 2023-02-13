@@ -16,11 +16,11 @@ public class GerenciadorDeClientes {
     }
 
     public Cliente cadastrarCliente(String nome, String id, Contato contato) {
-        return repository.salvar(new Cliente(nome, id, contato));
+        return repository.salvar(new Cliente(nome, id, tipoDeIdentificacao, contato));
     }
 
     public void alterarCliente(String nome, String id, Contato contato) {
-        repository.alterar(new Cliente(nome, id, contato));
+        repository.alterar(new Cliente(nome, id, tipoDeIdentificacao, contato));
     }
 
     public Cliente consultarPorId(String id) {
