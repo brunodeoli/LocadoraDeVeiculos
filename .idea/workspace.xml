@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbcd6a69-7589-4839-9118-ad4d12749ea4" name="Changes" comment="Criando ligação entre cliente e veiculo a partir de contrato de locação">
+    <list default="true" id="cbcd6a69-7589-4839-9118-ad4d12749ea4" name="Changes" comment="Menu funcional. Calculo de desconto. Tipo de cliente. Cadastros veiculo e cliente.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeClientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeLocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeLocacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/gerenciadores/GerenciadorDeVeiculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/enums/TipoDeCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/enums/TipoDeCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/enums/TipoDeVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/enums/TipoDeVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/repository/LocacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/repository/LocacaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entidades/ContratoDeAluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entidades/ContratoDeAluguel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entidades/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entidades/Veiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tipos/Agendamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tipos/Agendamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuAlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Clientes/MenuAlterarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Clientes/MenuCadastrarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Clientes/MenuCadastrarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tipos/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tipos/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Locacao/MenuCadastrarLocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Locacao/MenuCadastrarLocacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MenuComSubmenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuComSubmenus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuCadastrarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuCadastrarVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Locacao/MenuEfetuarAluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Locacao/MenuEfetuarAluguel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Locacao/MenuEfetuarDevolucao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Locacao/MenuEfetuarDevolucao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MenuGeralFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuGeralFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuAlterarVeiculoCadastrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuAlterarVeiculoCadastrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Veiculos/MenuListarVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Veiculos/MenuListarVeiculos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,14 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Bruno/IdeaProjects/LocadoraDeVeiculos/src/view/Locacao"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruno/IdeaProjects/LocadoraDeVeiculos/src/view/Locacao&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="controller.repository" />
@@ -113,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676311916166</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Menu funcional. Calculo de desconto. Tipo de cliente. Cadastros veiculo e cliente.">
+      <created>1676320945859</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676320945859</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -166,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criando Locadora aplicando MVC com menu, repository, gerenciadores, entidades, etc" />
     <MESSAGE value="Criando ligação entre cliente e veiculo a partir de contrato de locação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando ligação entre cliente e veiculo a partir de contrato de locação" />
+    <MESSAGE value="Menu funcional. Calculo de desconto. Tipo de cliente. Cadastros veiculo e cliente." />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu funcional. Calculo de desconto. Tipo de cliente. Cadastros veiculo e cliente." />
   </component>
 </project>

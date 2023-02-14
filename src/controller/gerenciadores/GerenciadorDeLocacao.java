@@ -7,6 +7,7 @@ import model.entidades.Cliente;
 import model.entidades.ContratoDeAluguel;
 import model.entidades.Veiculo;
 import model.enums.StatusDeContrato;
+import model.enums.StatusDeVeiculo;
 import model.tipos.Agendamento;
 
 import java.util.List;
@@ -58,7 +59,10 @@ public class GerenciadorDeLocacao {
     }
 
     public Veiculo escolherVeiculo(String placa){
-        return veiculosRepository.buscar(placa);
+        Veiculo veiculo = veiculosRepository.buscar(placa.toUpperCase());
+        if(veiculo.getStatusDeVeiculo().equals(StatusDeVeiculo.ALUGADO))
+            return null;
+        return veiculo;
     }
 
     public void alterarContrato(ContratoDeAluguel contrato){

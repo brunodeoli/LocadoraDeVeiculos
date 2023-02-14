@@ -16,7 +16,7 @@ public class Veiculo implements Entidade {
     public Veiculo(String marca, String modelo, String placa, TipoDeVeiculo tipoDeVeiculo) {
         this.marca = marca;
         this.modelo = modelo;
-        this.placa = placa;
+        this.placa = placa.toUpperCase();
         this.tipoDeVeiculo = tipoDeVeiculo;
         this.statusDeVeiculo = StatusDeVeiculo.DISPONIVEL;
     }

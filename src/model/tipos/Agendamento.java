@@ -33,4 +33,9 @@ public class Agendamento {
     public void setLocal(String local) {
         this.local = local;
     }
+
+    @Override
+    public String toString() {
+        return data.format(fmt) + " - " + local;
+    }
 }

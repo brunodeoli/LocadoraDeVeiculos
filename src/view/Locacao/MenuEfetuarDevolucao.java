@@ -11,7 +11,7 @@ public class MenuEfetuarDevolucao extends Submenu {
     private final GerenciadorDeLocacao gerenciadorDeLocacao;
 
     public MenuEfetuarDevolucao(GerenciadorDeLocacao gerenciadorDeLocacao) {
-        super("Efetuar devolucao de contrato de " + gerenciadorDeLocacao.DESCRICAO_CLASSE);
+        super("Efetuar devolução de contrato de " + gerenciadorDeLocacao.DESCRICAO_CLASSE);
         this.gerenciadorDeLocacao = gerenciadorDeLocacao;
     }
 
@@ -24,7 +24,12 @@ public class MenuEfetuarDevolucao extends Submenu {
             return;
         }
 
-        if(gerenciadorDeLocacao.isContratoEmAndamento(id)){
+        if(gerenciadorDeLocacao.isContratoAberto(id)){
+            System.out.println("O contrato está em aberto e não pode ser feita a devolução.");
+            return;
+        }
+
+        if(!gerenciadorDeLocacao.isContratoEmAndamento(id)){
             System.out.println("O contrato não se encontra em andamento");
             return;
         }

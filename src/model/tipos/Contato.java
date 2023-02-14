@@ -34,4 +34,11 @@ public class Contato {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+    @Override
+    public String toString() {
+        return "email: " + email +
+                "telefone: " + telefone +
+                "endereço: " + endereco;
+    }
 }

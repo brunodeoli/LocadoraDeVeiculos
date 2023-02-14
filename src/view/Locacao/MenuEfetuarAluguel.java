@@ -24,7 +24,7 @@ public class MenuEfetuarAluguel extends Submenu {
             return;
         }
 
-        if(gerenciadorDeLocacao.isContratoAberto(id)){
+        if(!gerenciadorDeLocacao.isContratoAberto(id)){
             System.out.println("O contrato não se encontra mais aberto");
             return;
         }

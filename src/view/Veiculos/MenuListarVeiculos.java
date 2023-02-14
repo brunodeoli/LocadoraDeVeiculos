@@ -16,7 +16,7 @@ public class MenuListarVeiculos extends Submenu {
 
 
     public MenuListarVeiculos(GerenciadorDeVeiculos gerenciadorDeVeiculos) {
-        super("Listar todos " + GerenciadorDeClientes.DESCRICAO_CLASSE);
+        super("Listar todos " + GerenciadorDeVeiculos.DESCRICAO_CLASSE);
         this.gerenciadorDeVeiculos = gerenciadorDeVeiculos;
     }
 

@@ -30,13 +30,15 @@ public class LocacaoRepository implements Repository<ContratoDeAluguel> {
         if(isConcluido(entidade.getId()))
             return;
 
+        if(isEmAndamento(entidade.getId())){
+            entidade.setStatusDeContrato(StatusDeContrato.CONCLUIDO);
+            entidade.getVeiculoAlugado().setStatusDeVeiculo(StatusDeVeiculo.DISPONIVEL);
+        }
+
         if(isAberto(entidade.getId())){
             entidade.setStatusDeContrato(StatusDeContrato.ANDAMENTO);
             entidade.getVeiculoAlugado().setStatusDeVeiculo(StatusDeVeiculo.ALUGADO);
         }
-
-        entidade.setStatusDeContrato(StatusDeContrato.CONCLUIDO);
-        entidade.getVeiculoAlugado().setStatusDeVeiculo(StatusDeVeiculo.DISPONIVEL);
     }
 
     public boolean isAberto(String id){

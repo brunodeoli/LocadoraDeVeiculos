@@ -28,11 +28,11 @@ public class GerenciadorDeVeiculos {
     }
 
     public Veiculo consultarPorId(String id) {
-        return repository.buscar(id);
+        return repository.buscar(id.toUpperCase());
     }
 
     public boolean existeVeiculo(String id) {
-        return repository.buscar(id) != null;
+        return repository.buscar(id.toUpperCase()) != null;
     }
 
     public List<Veiculo> listarTodos() {

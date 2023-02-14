@@ -1,11 +1,15 @@
 package view.Locacao;
 
+import controller.gerenciadores.GerenciadorDeClientes;
 import controller.gerenciadores.GerenciadorDeLocacao;
-import controller.gerenciadores.GerenciadorDeVeiculos;
+import model.entidades.ContratoDeAluguel;
 import model.entidades.Veiculo;
-import model.enums.TipoDeVeiculo;
+import model.enums.StatusDeVeiculo;
+import model.tipos.Agendamento;
 import view.CapturadorDeEntrada;
 import view.Submenu;
+
+import java.time.LocalDateTime;
 
 public class MenuCadastrarLocacao extends Submenu {
 
@@ -35,22 +39,44 @@ public class MenuCadastrarLocacao extends Submenu {
         while(veiculoEscolhido == null){
             String veiculo = CapturadorDeEntrada.capturarString("o veiculo para alugar (placa): ");
             veiculoEscolhido = gerenciadorDeLocacao.escolherVeiculo(veiculo);
+
+            if(veiculoEscolhido==null){
+                System.out.println("Veiculo não existe ou indisponível.");
+            }
         }
 
         //informar data retirada
-        String dataRetirada = CapturadorDeEntrada.capturarString("a data de retirada do veiculo (dd/MM/yyyy HH:mm)");
+        String data = CapturadorDeEntrada.capturarString("a data e hora de retirada do veiculo (dd/MM/yyyy HH:mm): ");
+        LocalDateTime dataRetirata = LocalDateTime.parse(data, Agendamento.getFmt());
+        //informar local de retirada
+        String localRetirada = CapturadorDeEntrada.capturarString("o local de retirada: ");
+
+        //informar data devolução e verifica se data devolução é dps da de retirada
+        LocalDateTime dataDevolucao;
+
+        do{
+            data = CapturadorDeEntrada.capturarString("a data e hora de devolução do veiculo (dd/MM/yyyy HH:mm)");
+            dataDevolucao = LocalDateTime.parse(data, Agendamento.getFmt());
+
+            if(dataRetirata.isAfter(dataDevolucao)){
+                System.out.println("A data de devolucação informada é anterior a data de retirada.");
+            }
+        } while (dataRetirata.isAfter(dataDevolucao));
 
         //informar local de retirada
+        String localDevolucao = CapturadorDeEntrada.capturarString("o local de devolucao: ");
 
-        //informar data devolução
-        String dataDevolucao = CapturadorDeEntrada.capturarString("a data de retirada do veiculo (dd/MM/yyyy HH:mm)");
+        //cadastra contrato de aluguel
+        ContratoDeAluguel contratoCadastrado = gerenciadorDeLocacao.cadastrarContrato(
+                gerenciadorDeLocacao.selecionarCliente(id),
+                veiculoEscolhido,
+                new Agendamento(dataRetirata, localRetirada),
+                new Agendamento(dataDevolucao, localDevolucao)
+        );
 
-        //verificar se data devolução é dps da de retirada
-        //informar local de retirada
-        //criar
         //imprimir sucesso
+        System.out.println(GerenciadorDeLocacao.DESCRICAO_CLASSE + " cadastrada com sucesso");
         //imprimir contrato
-
-
+        System.out.println(contratoCadastrado);
     }
 }

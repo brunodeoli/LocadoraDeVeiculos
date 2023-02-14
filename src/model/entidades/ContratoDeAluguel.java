@@ -28,14 +28,16 @@ public class ContratoDeAluguel implements Entidade{
 
 
         if(dataRetirada != null && dataDevolucao != null){
-            Double dias = Double.valueOf(Duration.between(dataRetirada.getData(),dataDevolucao.getData()).toDays());
+            Double diferencaDeDias = Double.valueOf(Duration.between(dataRetirada.getData(),dataDevolucao.getData()).toDays())+1;
             Double desconto = 0.0;
 
             if(cliente.getTipoDeCliente().equals(TipoDeCliente.PF)
-                && dias > 5){
+                && diferencaDeDias > 5){
                 desconto = 0.05;
-            }if(cliente.getTipoDeCliente().equals(TipoDeCliente.PJ)
-                && dias > 3){
+            }
+
+            if(cliente.getTipoDeCliente().equals(TipoDeCliente.PJ)
+                && diferencaDeDias > 3){
                 desconto = 0.10;
             }
 
@@ -45,7 +47,7 @@ public class ContratoDeAluguel implements Entidade{
                 case SUV -> 200.0;
             };
 
-            this.valorDoContrato = (dias*diaria)*(1-desconto);
+            this.valorDoContrato = (diferencaDeDias*diaria)*(1-desconto);
         }
     }
 
@@ -64,5 +66,16 @@ public class ContratoDeAluguel implements Entidade{
     @Override
     public String getId() {
         return ordemDeContrato;
+    }
+
+    @Override
+    public String toString() {
+        return "Contrato " + ordemDeContrato + ": \n" +
+                cliente + "\n" +
+                veiculoAlugado + "\n" +
+                "Data de retirada: " + dataRetirada + "\n" +
+                "Data de devolução: " + dataDevolucao + "\n" +
+                "Valor do contrato: " + valorDoContrato + "\n" +
+                "Status do contrato: " + statusDeContrato;
     }
 }
